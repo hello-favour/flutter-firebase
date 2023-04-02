@@ -92,6 +92,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 fillColor: Colors.grey[200],
                 filled: true,
               ),
+              toolbarOptions: const ToolbarOptions(
+                copy: true,
+                selectAll: true,
+                paste: true,
+                cut: true,
+              ),
               keyboardType: TextInputType.emailAddress,
             ),
           ),
@@ -117,6 +123,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 hintText: "Password",
                 fillColor: Colors.grey[200],
                 filled: true,
+              ),
+              toolbarOptions: const ToolbarOptions(
+                copy: true,
+                selectAll: true,
+                paste: true,
+                cut: true,
               ),
               obscureText: true,
             ),
@@ -144,6 +156,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 fillColor: Colors.grey[200],
                 filled: true,
               ),
+              toolbarOptions: const ToolbarOptions(
+                copy: true,
+                selectAll: true,
+                paste: true,
+                cut: true,
+              ),
               obscureText: true,
             ),
           ),
@@ -155,7 +173,7 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.deepPurple[200],
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Center(

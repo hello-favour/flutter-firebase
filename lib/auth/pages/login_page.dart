@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/auth/pages/forgot_password_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
@@ -69,6 +70,12 @@ class _LoginPageState extends State<LoginPage> {
                 fillColor: Colors.grey[200],
                 filled: true,
               ),
+              toolbarOptions: const ToolbarOptions(
+                copy: true,
+                selectAll: true,
+                paste: true,
+                cut: true,
+              ),
               keyboardType: TextInputType.emailAddress,
             ),
           ),
@@ -95,7 +102,37 @@ class _LoginPageState extends State<LoginPage> {
                 fillColor: Colors.grey[200],
                 filled: true,
               ),
+              toolbarOptions: const ToolbarOptions(
+                copy: true,
+                selectAll: true,
+                paste: true,
+                cut: true,
+              ),
               obscureText: true,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const ForgotPasswordPage();
+                    }));
+                  },
+                  child: const Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 10),
@@ -106,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.deepPurple[200],
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Center(
