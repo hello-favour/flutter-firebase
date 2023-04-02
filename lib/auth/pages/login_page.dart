@@ -127,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text(
                     "Forgot Password?",
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple[200],
+                  color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Center(
@@ -174,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: const Text(
                   " Register now",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
