@@ -66,9 +66,9 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Future addUserDetails(
       String firstName, String lastName, String email, int age) async {
-    await FirebaseFirestore.instance.collection("user").add({
-      "firstName": firstName,
-      "lastName": lastName,
+    await FirebaseFirestore.instance.collection("users").add({
+      "first name": firstName,
+      "last name": lastName,
       "email": email,
       "age": age,
     });
@@ -82,6 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 70),
             Text("Hello There",
                 style: GoogleFonts.bebasNeue(
                   fontSize: 52,
