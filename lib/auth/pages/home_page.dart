@@ -15,7 +15,11 @@ class _HomePageState extends State<HomePage> {
 
   List<String> docIds = [];
   Future getDocIds() async {
-    await FirebaseFirestore.instance.collection("users").get().then(
+    await FirebaseFirestore.instance
+        .collection("users")
+        .where("age", isLessThan: 50)
+        .get()
+        .then(
           (snapShot) => snapShot.docs.forEach(
             (document) {
               print(document.reference);
